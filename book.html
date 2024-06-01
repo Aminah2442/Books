@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Books</title>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="book vertical-flex-container">
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid justify-content-center">
+            <form class="d-flex">
+                <button class="btn btn-light" type="button" onclick="showDiv('search')">Search</button>
+                <button class="btn btn-light" type="button" onclick="showDiv('insert')">Insert</button>
+                <button class="btn btn-light" type="button" onclick="showDiv('update')">Update</button>
+                <button class="btn btn-light" type="button" onclick="showDiv('delete')">Delete</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="list">List Of Books</div>
+
+    <div class="search">
+        <div class="info">Retrieve a book from the library by searching the book’s ISBN, name, or publisher code</div>
+        <table class="table table-bordered custom-table">
+            <thead class="table-light">
+            <tr>
+                <th scope="col">
+                    <form class="d-flex " role="search">
+                        <input class="search form-control me-2" type="search" placeholder="ISBN" aria-label="Search"/>
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </form>
+                </th>
+                <th scope="col">
+                    <form class="d-flex " role="search">
+                        <input class="search form-control me-2" type="search" placeholder="Name" aria-label="Name"/>
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </form>
+                </th>
+                <th scope="col">
+                    <form class="d-flex " role="search">
+                        <input class="search form-control me-2" type="search" placeholder="Code" aria-label="Code"/>
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    </form>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>978-0-06-112008-4</td>
+                <td>To Kill a Mockingbird</td>
+                <td>HARPE</td>
+            </tr>
+            <tr>
+                <td>978-0-14-104034-9</td>
+                <td>Pride and Prejudice</td>
+                <td>PENGU</td>
+            </tr>
+            <tr>
+                <td>978-0-547-92822-7</td>
+                <td>The Hobbit</td>
+                <td>HMCO</td>
+            </tr>
+            <tr>
+                <td>978-0-316-76948-8</td>
+                <td>The Catcher in the Rye</td>
+                <td>LITTL</td>
+            </tr>
+            <tr>
+                <td>978-0-7432-7356-5</td>
+                <td>The Great Gatsby</td>
+                <td>SCRIB</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="update">
+        <div class="info">Edit the information of a book</div>
+        <table class="table table-bordered custom-table">
+            <thead class="table-light">
+            <tr>
+                <th scope="col">ISBN</th>
+                <th scope="col">Name</th>
+                <th scope="col">Publisher code</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>978-0-06-112008-4</td>
+                <td>To Kill a Mockingbird</td>
+                <td>HARPE</td>
+                <td><i class="fa-solid fa-pen-to-square update-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-14-104034-9</td>
+                <td>Pride and Prejudice</td>
+                <td>PENGU</td>
+                <td><i class="fa-solid fa-pen-to-square update-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-547-92822-7</td>
+                <td>The Hobbit</td>
+                <td>HMCO</td>
+                <td><i class="fa-solid fa-pen-to-square update-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-316-76948-8</td>
+                <td>The Catcher in the Rye</td>
+                <td>LITTL</td>
+                <td><i class="fa-solid fa-pen-to-square update-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-7432-7356-5</td>
+                <td>The Great Gatsby</td>
+                <td>SCRIB</td>
+                <td><i class="fa-solid fa-pen-to-square update-icon"></i></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="delete">
+        <div class="info">Delete a book from the library</div>
+        <table class="table table-bordered custom-table">
+            <thead class="table-light">
+            <tr>
+                <th scope="col">ISBN</th>
+                <th scope="col">Name</th>
+                <th scope="col">Publisher code</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>978-0-06-112008-4</td>
+                <td>To Kill a Mockingbird</td>
+                <td>HARPE</td>
+                <td><i class="fa-solid fa-trash-can delete-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-14-104034-9</td>
+                <td>Pride and Prejudice</td>
+                <td>PENGU</td>
+                <td><i class="fa-solid fa-trash-can delete-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-547-92822-7</td>
+                <td>The Hobbit</td>
+                <td>HMCO</td>
+                <td><i class="fa-solid fa-trash-can delete-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-316-76948-8</td>
+                <td>The Catcher in the Rye</td>
+                <td>LITTL</td>
+                <td><i class="fa-solid fa-trash-can delete-icon"></i></td>
+            </tr>
+            <tr>
+                <td>978-0-7432-7356-5</td>
+                <td>The Great Gatsby</td>
+                <td>SCRIB</td>
+                <td><i class="fa-solid fa-trash-can delete-icon"></i></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="insert">
+        <div class="info-and-icon">
+            <div class="info">Add a book to the library</div>
+            <div> New book</div>
+            <i class="fa-solid fa-plus add-icon"></i>
+        </div>
+        <table class="table table-bordered custom-table">
+            <thead class="table-light">
+            <tr>
+                <th scope="col">ISBN</th>
+                <th scope="col">Name</th>
+                <th scope="col">Publisher code</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>978-0-06-112008-4</td>
+                <td>To Kill a Mockingbird</td>
+                <td>HARPE</td>
+            </tr>
+            <tr>
+                <td>978-0-14-104034-9</td>
+                <td>Pride and Prejudice</td>
+                <td>PENGU</td>
+            </tr>
+            <tr>
+                <td>978-0-547-92822-7</td>
+                <td>The Hobbit</td>
+                <td>HMCO</td>
+            </tr>
+            <tr>
+                <td>978-0-316-76948-8</td>
+                <td>The Catcher in the Rye</td>
+                <td>LITTL</td>
+            </tr>
+            <tr>
+                <td>978-0-7432-7356-5</td>
+                <td>The Great Gatsby</td>
+                <td>SCRIB</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page">
+        <i class="fa-solid fa-chevron-left"></i>
+        <div class="p-2">Page 1 Of 10</div>
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+
+</div>
+
+<script>
+    function showDiv(divName) {
+        var divs = ['search', 'insert', 'update', 'delete'];
+        var buttons = document.querySelectorAll('.btn');
+
+        // Hide all divs
+        divs.forEach(function (div) {
+            document.querySelector('.' + div).style.display = 'none';
+        });
+
+        // Remove active class from all buttons
+        buttons.forEach(function (button) {
+            button.classList.remove('active');
+        });
+
+        // Show the selected div
+        document.querySelector('.' + divName).style.display = 'block';
+
+        // Add active class to the clicked button
+        document.querySelector(`button[onclick="showDiv('${divName}')"]`).classList.add('active');
+        buttons.classList.add('active');
+    }
+
+    // Initially show the search div
+    showDiv('search');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+:root {
+    --beige: #DCD2C6;
+    --gold: #D49146;
+    --brown: #B9AEA1;
+    --background: #F1F1EC;
+}
+* {
+    font-family: "Poppins", sans-serif;
+}
+body {
+    height: 100vh;
+    background-image: url("background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* To make content fit in book's page */
+.book {
+    width: 660px;
+    height: 500px;
+    margin: 200px 30px 40px 40px;
+}
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.container-fluid{
+    background-color: var(--background);
+}
+.btn {
+    padding: 8px 40px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: var(--beige);
+    color: black;
+    border-color: black;
+    margin: 5px;
+}
+.btn:hover {
+    background-color: var(--brown);
+    border-color: black;
+    color: black;
+}
+.active {
+    background-color: var(--gold) !important;
+    border-color: black !important;
+    color: black !important;
+}
+.page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.list{
+    padding-top: 20px;
+    font-size: 25px;
+}
+.info-and-icon {
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.info{
+    padding-bottom: 10px;
+    font-size: 15px;
+    color: gray;
+}
+.info-and-icon, .info {
+    flex: 1;
+}
+.table {
+    padding-bottom: 10px;
+}
+.table th, .table td {
+    border: 1px solid black;
+}
+.custom-table thead {
+    background-color: var(--brown);
+}
+.custom-table tbody {
+    background-color: var(--background);
+}
+.search{
+    border-radius: 20px;
+    border-color: gray;
+}
+.search-icon, .add-icon{
+    background-color: #393A39;
+    color: var(--background);
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 5px;
+}
+.update-icon, .delete-icon {
+    font-size: 20px;
+}
